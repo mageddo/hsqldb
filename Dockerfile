@@ -43,7 +43,7 @@ RUN export CONTAINER_USER=hsql && \
 VOLUME ["/opt/database","/scripts"]
 EXPOSE 9001
 
-USER hsql
+USER root
 WORKDIR /scripts
 COPY imagescripts/docker-entrypoint.sh /opt/hsqldb/docker-entrypoint.sh
 ENTRYPOINT ["/opt/hsqldb/docker-entrypoint.sh"]
